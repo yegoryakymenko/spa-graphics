@@ -3,8 +3,7 @@ import {
   Route,
   Switch,
   BrowserRouter as Router,
-  Redirect,
-  Link
+  Redirect
 } from "react-router-dom";
 import Home from "../components/Home";
 import Table from "../components/Table";
@@ -70,7 +69,6 @@ class Routes extends Component {
                   <DropdownMenu right>
                     <DropdownItem href="/table">Table</DropdownItem>
                     <DropdownItem href="/graph">Graph</DropdownItem>
-                    <DropdownItem divider />
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </Nav>
@@ -85,7 +83,7 @@ class Routes extends Component {
               />
               <Route
                 path="/graph"
-                render={props => <Graph {...props} data={this.state.data} />}
+                render={props => <Graph {...props} items={items} />}
               />
 
               <Redirect to="/home" />

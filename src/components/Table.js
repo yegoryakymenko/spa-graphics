@@ -26,18 +26,6 @@ class Table extends Component {
   };
 
   render() {
-    // {
-    //   Header: "Date",
-    //   accessor: "adjusted" // String-based value accessors!
-    // },
-    // {this
-    //  this,
-    //  this
-    //  this {
-    //  thisd, "d");
-    //  this
-    // }this
-
     const columns = [
       {
         Header: "Date",
@@ -83,7 +71,6 @@ class Table extends Component {
         <ReactTable data={this.getData()} columns={columns} />
       </div>
     );
-    // return <div>qwe</div>;
   }
 }
 
